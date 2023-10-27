@@ -1,0 +1,15 @@
+@import "../../placeholders/display";
+
+.notifications {
+  @extend %absolute-clear;
+
+  gap: 0.7em !important;
+
+  left: auto;
+  right: calc(1vw + 1vh);
+  bottom: calc(1vw + 1vh);
+
+  flex-direction: column-reverse !important;
+
+  z-index: 999;
+}

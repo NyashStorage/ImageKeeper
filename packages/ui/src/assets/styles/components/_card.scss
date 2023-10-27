@@ -1,0 +1,12 @@
+@import "../placeholders/display";
+@import "../placeholders/shadows";
+@import "../placeholders/borders";
+@import "../variables/colors";
+
+.card {
+  @extend %flex-column, %rounded;
+
+  background: $primary-color-100;
+
+  padding: 1.3em;
+}

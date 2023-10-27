@@ -1,0 +1,14 @@
+@import "../../placeholders/display";
+@import "../../variables/colors";
+
+.modal {
+  @extend %fixed-clear, %flex-column, %flex-center;
+
+  background: rgba($primary-color-100, .8);
+  backdrop-filter: blur(10px);
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 100;
+}

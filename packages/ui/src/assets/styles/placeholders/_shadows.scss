@@ -1,0 +1,7 @@
+@import "../variables/shadows";
+
+@each $i in map-keys($shadows) {
+  %box-shadow-#{$i} {
+    box-shadow: map-get($shadows, $i);
+  }
+}

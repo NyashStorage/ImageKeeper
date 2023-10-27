@@ -1,0 +1,43 @@
+@import "../placeholders/typography";
+@import "../variables/typography";
+@import "../variables/colors";
+
+h1 {
+  @extend %default-heading;
+
+  font-weight: 700 !important;
+  font-size: $h1-font-size;
+  letter-spacing: $h1-letter-spacing;
+}
+
+h2 {
+  @extend %default-heading;
+
+  font-size: $h2-font-size;
+  letter-spacing: $h2-letter-spacing;
+}
+
+h3 {
+  @extend %default-heading;
+
+  font-size: $h3-font-size;
+  letter-spacing: $h3-letter-spacing;
+}
+
+big {
+  @extend %default-typography;
+
+  font-size: $large-font-size;
+  letter-spacing: $large-letter-spacing;
+}
+
+small {
+  @extend %default-typography;
+
+  font-size: $small-font-size;
+  letter-spacing: $small-letter-spacing;
+}
+
+body, div, p, span, article, section {
+  @extend %default-typography;
+}

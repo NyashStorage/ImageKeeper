@@ -1,0 +1,47 @@
+@import "../../placeholders/display";
+@import "../../placeholders/shadows";
+@import "../../placeholders/borders";
+@import "../../placeholders/transitions";
+@import "../../placeholders/typography";
+@import "../../variables/colors";
+
+button {
+  @extend %flex-center, %box-shadow-1, %rounded, %default-transition, %default-typography;
+
+  gap: 0.625em;
+
+  padding: 1em;
+
+  color: $accent-color-400;
+  background: $primary-color-200;
+
+  overflow: hidden;
+
+  &:hover:not(:disabled) {
+    @extend %box-shadow-2;
+
+    color: $accent-color-500;
+    background: $success-color;
+  }
+
+  &:disabled {
+    color: $disabled-text-color;
+    background: $disabled-background-color;
+
+    cursor: not-allowed;
+
+
+    & * {
+      color: $disabled-text-color;
+    }
+  }
+
+
+  & * {
+    color: $accent-color-400;
+  }
+
+  & svg {
+    font-size: 1.5em;
+  }
+}

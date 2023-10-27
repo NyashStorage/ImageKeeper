@@ -1,0 +1,10 @@
+@import "../placeholders/display";
+@import "../placeholders/borders";
+@import "../variables/colors";
+
+hr {
+  @extend %full-width, %rounded;
+
+  color: transparent;
+  background: $primary-color-200;
+}

@@ -1,0 +1,31 @@
+@import "../../placeholders/transitions";
+@import "../../variables/colors";
+
+.notification {
+  max-width: 320px;
+  height: fit-content;
+
+  gap: 0.313em;
+
+  padding: 1.3em;
+
+  &> .notification__title {
+    font-weight: 700;
+  }
+
+  &.notification--info > .notification__title {
+    color: $black-color;
+  }
+
+  &.notification--success > .notification__title {
+    color: $success-color;
+  }
+
+  &.notification--warning > .notification__title {
+    color: $warning-color;
+  }
+
+  &.notification--error > .notification__title {
+    color: $error-color;
+  }
+}

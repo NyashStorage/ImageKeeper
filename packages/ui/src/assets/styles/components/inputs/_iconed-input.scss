@@ -1,0 +1,82 @@
+@import "../../placeholders/display";
+@import "../../placeholders/transitions";
+@import "../../placeholders/typography";
+@import "../../variables/colors";
+@import "../../variables/borders";
+
+.input {
+  @extend %flex-center, %default-transition, %default-typography;
+
+  padding: 0.25em 0.5em;
+
+  gap: 0.625em;
+
+  color: $primary-color-300;
+  border-bottom: $border-size solid $primary-color-300;
+
+  font-size: $large-font-size;
+  letter-spacing: $large-letter-spacing;
+
+
+  * {
+    @extend %default-transition;
+
+    color: $primary-color-300;
+  }
+
+  svg {
+    font-size: 1.5em;
+  }
+
+
+  &:hover, &:has(input:focus) {
+    color: $accent-color-400;
+    border-color: $accent-color-400;
+
+    * {
+      color: $accent-color-400;
+    }
+  }
+
+  &:has(input:not(:placeholder-shown)) {
+    color: $accent-color-400;
+
+    * {
+      color: $accent-color-400;
+    }
+  }
+
+  &:has(input:disabled) {
+    color: $disabled-text-color;
+    border-color: $disabled-background-color;
+
+    cursor: not-allowed;
+
+    * {
+      color: $disabled-text-color;
+
+      cursor: not-allowed;
+    }
+  }
+
+
+  input[type="text"], input[type="password"] {
+    @extend %fill-parent;
+
+    color: $accent-color-400;
+
+    &::placeholder {
+      color: $primary-color-300;
+    }
+
+    &:disabled {
+      color: $disabled-text-color;
+
+      cursor: not-allowed;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

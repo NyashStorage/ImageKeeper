@@ -1,0 +1,13 @@
+@import "../placeholders/shadows";
+@import "../placeholders/borders";
+@import "../variables/colors";
+@import "../variables/transitions";
+
+.skeleton {
+  @extend %rounded;
+
+  background: linear-gradient(110deg, $primary-color-200 8%, $primary-color-100 18%, $primary-color-200 33%);
+  background-size: 200% 100%;
+
+  animation: calc($transition-time * 10) shine linear infinite;
+}

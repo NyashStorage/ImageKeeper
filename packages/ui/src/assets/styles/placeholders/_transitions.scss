@@ -1,0 +1,38 @@
+@import "../variables/transitions";
+
+%default-transition {
+  transition: all ease-in-out $transition-time;
+}
+
+%fade-in {
+  animation: ease-in fade-in $transition-time;
+}
+
+%fade-out {
+  animation: ease-in fade-out $transition-time;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+

@@ -1,0 +1,31 @@
+{
+  "name": "interweb",
+  "description": "Photo storage service.",
+  "author": {
+    "name": "Daniil Koshkin",
+    "email": "contact@nyashmyash99.ru",
+    "url": "https://nyashmyash99.ru"
+  },
+  "license": "https://files.foxinbox.su/license/LICENSE",
+  "private": true,
+  "scripts": {
+    "dev": "dotenv -e .env.development -- turbo run dev --no-daemon",
+    "build": "dotenv -e .env.production -- turbo run build",
+    "prod": "dotenv -e .env.production -- turbo run prod",
+    "test": "dotenv -e .env.test -- turbo run test --no-daemon",
+
+    "storybook": "turbo run storybook",
+
+    "test:run": "sh scripts/test-run.sh",
+    "test:docker:up": "docker-compose -f docker-compose.testing.yml up -d",
+    "test:docker:down": "docker-compose -f docker-compose.testing.yml down -v"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "tsconfig": "workspace:*",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.6.10"
+}

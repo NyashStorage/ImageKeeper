@@ -1,0 +1,103 @@
+@import "../../placeholders/display";
+@import "../../placeholders/transitions";
+@import "../../placeholders/borders";
+@import "../../placeholders/shadows";
+@import "../../variables/colors";
+@import "../../variables/borders";
+
+.image__interactable {
+  @extend %default-transition;
+
+  height: 200px;
+
+  position: relative;
+
+  padding: 0 !important;
+
+  background: 50% / cover no-repeat $primary-color-100;
+
+  &.image__interactable--long {
+    width: 335px;
+  }
+
+  &.image__interactable--short {
+    width: 150px;
+  }
+
+
+  &> .image__interactable__title {
+    @extend %absolute, %box-shadow-1;
+
+    right: 5%;
+    transform: translateY(-0.7em);
+    z-index: 1;
+
+    max-width: 60%;
+
+    padding: 0.313em;
+
+    color: $primary-color-400;
+    background: $warning-color;
+
+    text-align: right;
+    border-radius: 5px;
+  }
+
+  &> .image__interactable__uploading {
+    @extend %absolute-clear, %fill-parent, %flex-column, %flex-center;
+
+    gap: 0.313em;
+
+    &> h3, small {
+      color: $primary-color-500;
+      z-index: 1;
+    }
+
+    &> .image__interactable__uploading__progress {
+      @extend %absolute-clear, %fill-parent;
+
+      background: $primary-color-200;
+
+      border-radius: $border-radius-size 0 0 $border-radius-size;
+
+      opacity: 0.6;
+    }
+  }
+
+  &> .image__interactable__menu {
+    @extend %absolute, %flex-column, %flex-center, %default-transition;
+
+    left: 5%;
+    bottom: 10%;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    &> .image__interactable__menu__item {
+      @extend %flex, %default-transition;
+
+      color: $warning-color;
+
+      gap: 5px;
+
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+
+      &> svg {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &> .image__interactable__menu__background {
+    @extend %absolute-clear, %fill-parent, %rounded;
+
+    background: $primary-color-500;
+
+    opacity: 0.6;
+  }
+}

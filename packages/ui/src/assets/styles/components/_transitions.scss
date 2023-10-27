@@ -1,0 +1,9 @@
+@import "../placeholders/transitions";
+
+.fade-in {
+  @extend %fade-in;
+}
+
+.fade-out {
+  @extend %fade-out;
+}

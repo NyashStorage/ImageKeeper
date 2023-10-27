@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  postgres_test:
+    image: postgres:latest
+    container_name: interweb_testing_postgres
+
+    ports:
+      - '54345:5432'
+
+    env_file:
+      - .env.test

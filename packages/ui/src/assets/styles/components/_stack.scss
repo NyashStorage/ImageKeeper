@@ -1,0 +1,7 @@
+@import "../placeholders/transitions";
+
+.stack {
+  @extend %default-transition;
+
+  display: flex;
+}

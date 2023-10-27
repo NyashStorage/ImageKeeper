@@ -1,0 +1,51 @@
+@import "../placeholders/display";
+
+// Visibility
+.hide {
+  display: none !important;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+// Sizes
+.fill-parent {
+  @extend %fill-parent;
+}
+
+// Container
+.container {
+  width: 99%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 70%;
+  }
+}

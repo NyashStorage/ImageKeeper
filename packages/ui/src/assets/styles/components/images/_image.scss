@@ -1,0 +1,9 @@
+@import "../../placeholders/borders";
+@import "../../placeholders/transitions";
+
+img {
+  @extend %rounded, %default-transition;
+
+  object-fit: cover;
+  object-position: center;
+}

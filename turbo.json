@@ -1,0 +1,31 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": ["NEXT_PUBLIC_*"],
+  "pipeline": {
+    "dev": {
+      "dependsOn": ["^db:generate", "^db:push"],
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^db:generate", "^db:push"],
+      "outputs": [".next/**", "!.next/cache/**", "dist", "storybook-static/**"]
+    },
+    "prod": {
+      "cache": false
+    },
+    "test": {
+      "dependsOn": ["^db:generate", "^db:push"],
+      "cache": false
+    },
+
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    }
+  }
+}
+

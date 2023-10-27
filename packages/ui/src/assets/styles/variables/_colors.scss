@@ -1,0 +1,41 @@
+// Palette
+$black-color: #1E1E1E; // Typography
+$white-color: #FAFAFA;
+$red-color: #E3170A; // Red
+$green-color: #A9E5BB; // Green
+$yellow-color: #efda0d; // Yellow
+
+$gray-color-100: #F7F7F7; // Gray-100
+$gray-color-200: #EEEEEE; // Gray-200
+$gray-color-500: #929AAB; // Gray-500
+$gray-color-900: #393E46; // Gray-900
+
+$purple-color-500: #95649C; // Purple-500
+$purple-color-600: #6F4A74; // Purple-600
+$purple-color-700: #523756; // Purple-700
+$purple-color-800: #3D293F; // Purple-800
+$purple-color-900: #2D1E2F; // Purple-900
+
+
+// System
+$primary-color-100: $gray-color-100;
+$primary-color-200: $gray-color-200;
+$primary-color-300: $gray-color-500;
+$primary-color-400: $gray-color-900;
+$primary-color-500: $black-color;
+
+$accent-color-100: $purple-color-500;
+$accent-color-200: $purple-color-600;
+$accent-color-300: $purple-color-700;
+$accent-color-400: $purple-color-800;
+$accent-color-500: $purple-color-900;
+
+$error-color: $red-color;
+$success-color: $green-color;
+$warning-color: $yellow-color;
+
+$disabled-background-color: $gray-color-200;
+$disabled-text-color: $gray-color-500;
+
+$text-color: $black-color;
+$contract-text-color: $white-color;

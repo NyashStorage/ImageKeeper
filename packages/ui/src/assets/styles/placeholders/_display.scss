@@ -1,0 +1,60 @@
+// Flex
+%flex {
+  display: flex;
+}
+
+%flex-row {
+  @extend %flex;
+
+  flex-direction: row;
+}
+
+%flex-column {
+  @extend %flex;
+
+  flex-direction: column;
+}
+
+%flex-center {
+  @extend %flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+// Absolute
+%absolute {
+  position: absolute;
+}
+
+%absolute-clear {
+  @extend %absolute;
+
+  top: 0;
+  left: 0;
+}
+
+// Fixed
+%fixed {
+  position: fixed;
+}
+
+%fixed-clear {
+  @extend %fixed;
+
+  top: 0;
+  left: 0;
+}
+
+// Sizes
+%full-width {
+  width: 100%;
+}
+
+%full-height {
+  height: 100%;
+}
+
+%fill-parent {
+  @extend %full-width, %full-height;
+}
