@@ -1,0 +1,10 @@
+import { ApiProperty } from '@nestjs/swagger';
+import { Expose } from 'class-transformer';
+
+export class LogoutResponse {
+  @Expose()
+  @ApiProperty({ nullable: false })
+  success: boolean;
+
+  refresh_token: string;
+}
